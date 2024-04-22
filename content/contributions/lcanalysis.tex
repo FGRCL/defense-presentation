@@ -1,0 +1,51 @@
+\begin{frame}{Contribution 5: Learning Curve Analysis}
+    \begin{block}{Estimate the amount of data required to achieve AAMI performance}
+        \begin{itemize}
+            \item Methodology
+            \item Results
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Contribution 5: Learning Curve Analysis}{Methodology}
+    \begin{figure}
+        \includesvg[width=\columnwidth]{lcanalysis/lc analysis split.svg}
+    \end{figure}
+    \begin{itemize}
+        \item MLP Model
+        \item Heartbeat Input
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Contribution 5: Learning Curve Analysis}{Results}
+    \begin{figure}[htbp]
+        \includesvg[width=0.45\columnwidth]{lcanalysis/lc analysis SBP MAE.svg}
+        \hfill
+        \includesvg[width=0.45\columnwidth]{lcanalysis/lc analysis SBP SD.svg}
+
+        \includesvg[width=0.45\columnwidth]{lcanalysis/lc analysis DBP MAE.svg}
+        \hfill
+        \includesvg[width=0.45\columnwidth]{lcanalysis/lc analysis DBP SD.svg}
+    \end{figure}
+    Improvement for SBP MAE only
+\end{frame}
+
+
+\begin{frame}{Contribution 5: Learning Curve Analysis}{Results}
+
+    \begin{equation}\label{eq:fitted curve}
+        y=\num{28.533} - \num{9.518} x^{\num{0.295}}
+    \end{equation}
+    \begin{figure}[htbp]
+        \includesvg[width=0.7\columnwidth]{lcanalysis/fitted model.svg}
+    \end{figure}
+
+    \pause
+    \begin{itemize}
+        \item $42 \times 21.52 \approx 904$ patients
+        \item Low diversity dataset
+    \end{itemize}
+\end{frame}
+
+
+

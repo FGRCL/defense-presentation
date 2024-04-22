@@ -1,0 +1,52 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage[inkscapelatex=false]{svg}
+\usepackage{tabularx}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage[normalem]{ulem}
+\graphicspath{ {./graphics/} }
+\usetheme{Madrid}
+\graphicspath{ {Pictures/} }
+\definecolor{lightblue}{RGB}{0,73,114}
+\definecolor{grund}{RGB}{238,241,251}          
+\definecolor{schrift}{RGB}{0,73,114}
+\definecolor{magenta}{RGB}{128,0,128}
+\definecolor{maroon}{RGB}{113, 41, 21  }
+\setbeamercolor{structure}{fg=maroon}
+
+\newcommand*{\thead}[1]{\multicolumn{1}{c}{#1}}
+
+\title{Blood Pressure Estimation through Photoplethysmography using Deep Learning in Clinical Setting: Critical Survey and Solutions}
+\author{François LaBerge}
+\institute[]{Concordia University}
+\date{April 2024}
+
+\begin{document}
+
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+
+\frame{\titlepage}
+
+% IMPACK CPR
+% It's an ML regerssion task
+% explain random vs patient-wise split
+% Training settings
+
+\section{Intro}
+
+\section{Contributions}
+\input{content/contributions.tex}
+
+\input{content/references.tex}
+
+% supplemental slides tables of results
+
+\end{document}
