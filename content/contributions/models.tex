@@ -1,13 +1,11 @@
 \begin{frame}{Contribution 3: Proposed Models}
-    \begin{block}{Compare Models from the literature for a clinical setting}
-        \begin{itemize}
-            \item Implement Our Models
-            \item Compare random vs. patient-wise split
-        \end{itemize}
+    \begin{block}{Objective}
+        Propose new preprocessing methodologies and deep learning architectures for BP monitoring.
+        Evaluate our models against reproduced models for a concrete clinical context.
     \end{block}
 \end{frame}
 
-\begin{frame}{Contribution 3: Proposed Models}{Implement Our Models}
+\begin{frame}{Contribution 3: Proposed Models}{Methodology}
     Compare popular feature-extraction layers
     \begin{itemize}
         \item MLP
@@ -60,9 +58,9 @@
     \begin{columns}
         \column{0.5\columnwidth}
         \begin{figure}
-            \includesvg[width=0.35\columnwidth]{models/Residual Conv.svg}
+            \includesvg[width=0.3\columnwidth]{models/Residual Conv.svg}
             \hfill
-            \includesvg[width=0.35\columnwidth]{models/Residual Conv - Residual Block.svg}
+            \includesvg[width=0.3\columnwidth]{models/Residual Conv - Residual Block.svg}
         \end{figure}
 
         \column{0.5\columnwidth}
@@ -99,31 +97,29 @@
             \item Second dense layer: embedding size
         \end{itemize}
     \end{columns}
-\end{frame}
 
-\begin{frame}{Contribution 3: Input Methodologies}
-    \begin{block}{Compare Input Methodologies}
-        \begin{itemize}
-            \item Window
-            \item Heartbeat
-            \item Heartbeat sequence
-        \end{itemize}
-    \end{block}
+
+\end{frame}\begin{frame}{Contribution 3: Input Methodologies}{Methodology}
+    Compare Input Methodologies
+    \begin{itemize}
+        \item Window
+        \item Heartbeat
+        \item Heartbeat sequence
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Contribution 3: Heartbeat Sequence Input}{Methodology}
     Keep fined-grained analysis and temporal aspect
     \begin{figure}
-        \includegraphics[width=0.4\columnwidth]{inputs/window.png}
+        \includegraphics[width=0.35\columnwidth]{inputs/window.png}
 
-        \includegraphics[width=0.4\columnwidth]{inputs/heartbeat.png}
-        \hfill
-        \includegraphics[width=0.4\columnwidth]{inputs/heartbeat-sequence.png}
+        \includegraphics[width=0.35\columnwidth]{inputs/heartbeat.png}
+        \includegraphics[width=0.35\columnwidth]{inputs/heartbeat-sequence.png}
     \end{figure}
 \end{frame}
 
 
-\begin{frame}{Contribution 3 \& 4}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     \centering
     Window
     \begin{figure}
@@ -137,7 +133,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 3 \& 4}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     \centering
     Heartbeat
     \begin{figure}
@@ -151,7 +147,7 @@
 \end{frame}
 
 
-\begin{frame}{Contribution 3 \& 4}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     \centering
     Heartbeat Sequence
     \begin{figure}
@@ -165,7 +161,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 3 \& 4}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     \centering
     Heartbeat Sequence
     \begin{figure}
@@ -179,13 +175,13 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 3: Proposed Models}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     \begin{block}{Main Finding \#1}
-        Non-invasive, calibration-free BP monitoring remains an unsolved problem
+        Non-invasive, calibration-free BP monitoring remains an unsolved problem.
     \end{block}
 \end{frame}
 
-\begin{frame}{Contribution 3 \& 4}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     \begin{columns}
         \column{0.5\columnwidth}
         Best patient-wise:
@@ -231,7 +227,7 @@
 \end{frame}
 
 
-\begin{frame}{Contribution 3 \& 4}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     \begin{figure}[htbp]
         \centering
         \includesvg[width=0.42\columnwidth]{results/preprocessing random split SBP Mean Absolute Error.svg}
@@ -245,7 +241,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 3 \& 4}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     \begin{table}[htbp]
         \centering
         \resizebox{\linewidth}{!}{
@@ -267,7 +263,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 3 \& 4}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     \begin{columns}[c]
         \column{0.45\columnwidth}
         \begin{figure}
@@ -305,7 +301,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 3 \& 4}{Results}
+\begin{frame}{Contribution 2 \& 3}{Results}
     Overfitting solutions:
     \begin{itemize}
         \item \sout{Increase complexity}

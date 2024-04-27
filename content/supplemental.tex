@@ -1,0 +1,134 @@
+\begin{frame}{Results Table}
+    \begin{columns}
+        \column{0.5\columnwidth}
+        \centering \tiny Window
+        \begin{table}
+            \centering
+            \sisetup{detect-weight}
+            \robustify\bfseries
+            \resizebox{\columnwidth}{!}{
+                \begin{tabular}{lSSSS}
+                    \hline
+                                                                    & \multicolumn{2}{c}{SBP (mmHg)}         & \multicolumn{2}{c}{DBP (mmHg)}                                       \\
+                    \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+                    Model                                           & {MAE}                                  & {SD}                           & {MAE}            & {SD}             \\
+                    \hline
+                                                                    & \multicolumn{4}{c}{Patient-wise split}                                                                        \\
+                    \cmidrule{2-5}
+                    Slapničar et al. \cite{slapnicar_blood_2019}    & 21.013                                 & 14.158                         & 13.263           & 10.742           \\
+                    Athaya and Choi \cite{athaya_estimation_2021}   & 23.169                                 & 17.47                          & 12.056           & 10.384           \\
+                    Chen et al. \cite{chen_new_2022}                & 21.986                                 & 15.011                         & \bfseries 11.662 & \bfseries 10.292 \\
+                    Harfiya et al. \cite{harfiya_continuous_2021}   & 29.447                                 & 18.027                         & 11.843           & 9.597            \\
+                    Kim et al. \cite{kim_deepcnap_2022}             & \bfseries 19.1                         & \bfseries 13.889               & 12.313           & 10.186           \\
+                    Leitner et al. \cite{leitner_personalized_2022} & 103.847                                & 20.44                          & 28.935           & 14.732           \\
+                    Tazarv and Levorato \cite{tazarv_deep_2021}     & 21.301                                 & 16.772                         & 11.815           & 9.677            \\
+                    AlexNet \cite{schrumpf_assessment_2021}         & 21.222                                 & 15.017                         & 12.11            & 10.452           \\
+                    Resnet34 \cite{schrumpf_assessment_2021}        & 21.078                                 & 15.297                         & 11.968           & 10.47            \\
+                    \textbf{MLP}                                    & 22.83                                  & 17.164                         & 12.525           & 10.879           \\
+                    % \textbf{Softmax MLP} & 89.942 & 19.948 & 17.54 & 12.974 \\
+                    \textbf{RNN-MLP}                                & 25.447                                 & 17.252                         & 11.827           & 9.573            \\
+                    \textbf{Residual CNN}                           & 22.205                                 & 15.56                          & 12.88            & 10.367           \\
+                    \textbf{Transformer Encoder}                    & 25.59                                  & 17.164                         & 12.525           & 10.879           \\
+
+                                                                    & \multicolumn{4}{c}{Random split}                                                                              \\
+                    \cmidrule{2-5}
+                    Slapničar et al. \cite{slapnicar_blood_2019}    & 6.26                                   & 7.621                          & 3.601            & 5.711            \\
+                    Athaya and Choi \cite{athaya_estimation_2021}   & 13.146                                 & 12.162                         & 8.379            & 7.58             \\
+                    Chen et al. \cite{chen_new_2022}                & 5.051                                  & 7.232                          & 3.117            & 5.646            \\
+                    Harfiya et al. \cite{harfiya_continuous_2021}   & 14.908                                 & 12.387                         & 8.669            & 7.66             \\
+                    Kim et al. \cite{kim_deepcnap_2022}             & 4.725                                  & 6.746                          & 3.005            & 5.57             \\
+                    Leitner et al. \cite{leitner_personalized_2022} & 91.673                                 & 21.105                         & 31.872           & 13.742           \\
+                    Tazarv and Levorato \cite{tazarv_deep_2021}     & 6.255                                  & 8.155                          & 3.964            & 6.21             \\
+                    AlexNet \cite{schrumpf_assessment_2021}         & 5.303                                  & 7.043                          & 3.164            & 5.646            \\
+                    Resnet34 \cite{schrumpf_assessment_2021}        & 5.077                                  & 7.194                          & 3.172            & 5.696            \\
+                    \textbf{MLP}                                    & 11.52                                  & 11.125                         & 7.269            & 7.604            \\
+                    \textbf{RNN-MLP}                                & 7.685                                  & 8.512                          & 4.668            & 6.313            \\
+                    \textbf{Residual CNN}                           & \bfseries 4.56                         & \bfseries 6.452                & \bfseries 2.752  & \bfseries 5.377  \\
+                    \textbf{Transformer Encoder}                    & 14.908                                 & 12.413                         & 8.672            & 7.665            \\
+                    \hline
+                \end{tabular}
+            }
+        \end{table}
+
+        \column{0.5\columnwidth}
+        \centering \tiny Heartbeat Sequence
+        \begin{table}
+            \centering
+            \sisetup{detect-weight}
+            \robustify\bfseries
+            \resizebox{\columnwidth}{!}{
+                \begin{tabular}{lSSSS}
+                    \hline
+                                                                    & \multicolumn{2}{c}{SBP (mmHg)}         & \multicolumn{2}{c}{DBP (mmHg)}                                       \\
+                    \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+                    Model                                           & {MAE}                                  & {SD}                           & {MAE}            & {SD}             \\
+                    \hline
+                                                                    & \multicolumn{4}{c}{Patient-wise split}                                                                        \\
+                    \cmidrule{2-5}
+                    Slapničar et al. \cite{slapnicar_blood_2019}    & 22.092                                 & 15.087                         & 14.611           & 10.463           \\
+                    Athaya and Choi \cite{athaya_estimation_2021}   & 24.715                                 & 16.206                         & \bfseries 11.904 & \bfseries 10.043 \\
+                    Chen et al. \cite{chen_new_2022}                & 20.155                                 & 14.138                         & 14.201           & 9.927            \\
+                    Harfiya et al. \cite{harfiya_continuous_2021}   & 19.691                                 & 14.351                         & 14.065           & 10.42            \\
+                    Kim et al. \cite{kim_deepcnap_2022}             & \bfseries 18.792                       & \bfseries 14.353               & 13.021           & 9.982            \\
+                    Leitner et al. \cite{leitner_personalized_2022} & 21.863                                 & 16.69                          & 15.09            & 10.422           \\
+                    Tazarv and Levorato \cite{tazarv_deep_2021}     & 20.425                                 & 15.859                         & 12.501           & 9.735            \\
+                    AlexNet \cite{schrumpf_assessment_2021}         & 19.638                                 & 14.757                         & 13.927           & 10.331           \\
+                    Resnet34 \cite{schrumpf_assessment_2021}        & 20.8                                   & 14.176                         & 15.435           & 10.226           \\
+                    \textbf{MLP}                                    & 20.701                                 & 15.836                         & 13.13            & 9.836            \\
+                    \textbf{RNN-MLP}                                & 24.924                                 & 14.618                         & 13.158           & 10.394           \\
+                    \textbf{Residual CNN}                           & 20.738                                 & 14.565                         & 15.289           & 10.632           \\
+                    \textbf{Transformer Encoder}                    & 24.948                                 & 14.621                         & 13.106           & 10.333           \\
+
+                                                                    & \multicolumn{4}{c}{Random split}                                                                              \\
+                    \cmidrule{2-5}
+                    Slapničar et al. \cite{slapnicar_blood_2019}    & 7.201                                  & 8.034                          & 4.686            & 7.1              \\
+                    Athaya and Choi \cite{athaya_estimation_2021}   & 11.943                                 & 10.861                         & 8.599            & 8.666            \\
+                    Chen et al. \cite{chen_new_2022}                & 6.694                                  & 7.973                          & 4.469            & 7.134            \\
+                    Harfiya et al. \cite{harfiya_continuous_2021}   & 6.192                                  & 7.654                          & 4.099            & 6.965            \\
+                    Kim et al. \cite{kim_deepcnap_2022}             & 6.094                                  & 7.577                          & 3.986            & 6.685            \\
+                    Leitner et al. \cite{leitner_personalized_2022} & 18.812                                 & 25.476                         & 5.609            & 8.218            \\
+                    Tazarv and Levorato \cite{tazarv_deep_2021}     & 6.977                                  & 8.313                          & 4.736            & 7.418            \\
+                    AlexNet \cite{schrumpf_assessment_2021}         & 5.591                                  & 7.338                          & 3.613            & 6.607            \\
+                    Resnet34 \cite{schrumpf_assessment_2021}        & \bfseries 5.385                        & \bfseries 7.391                & \bfseries 3.407  & \bfseries 6.368  \\
+                    \textbf{MLP}                                    & 8.485                                  & 8.984                          & 5.911            & 7.624            \\
+                    \textbf{RNN-MLP }                               & 5.873                                  & 7.419                          & 3.907            & 6.666            \\
+                    \textbf{Residual CNN}                           & 5.783                                  & 7.331                          & 3.704            & 6.446            \\
+                    \textbf{Transformer Encoder}                    & 13.716                                 & 11.164                         & 10.126           & 9.007            \\
+                    \hline
+                \end{tabular}
+            }
+        \end{table}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Results Table}
+    \centering \tiny Heartbeat Sequence
+    \begin{table}[htbp]
+        \centering
+        \sisetup{detect-weight}
+        \robustify\bfseries
+        \resizebox{\columnwidth}{!}{
+            \begin{tabular}{lSSSS}
+                \hline
+                                             & \multicolumn{2}{c}{SBP (mmHg)}         & \multicolumn{2}{c}{DBP (mmHg)}                                      \\
+                \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+                Model                        & {MAE}                                  & {SD}                           & {MAE}            & {SD}            \\
+                \hline
+                                             & \multicolumn{4}{c}{Patient-wise split}                                                                       \\
+                \cmidrule{2-5}
+                \textbf{MLP}                 & \bfseries 18.547                       & \bfseries 14.054               & \bfseries 10.152 & \bfseries 6.986 \\
+                \textbf{RNN-MLP}             & 21.491                                 & 16.35                          & 14.952           & 9.648           \\
+                \textbf{Residual CNN}        & 21.469                                 & 14.545                         & 14.362           & 8.266           \\
+                \textbf{Transformer Encoder} & 19.294                                 & 14.459                         & 11.749           & 8.054           \\
+
+                                             & \multicolumn{4}{c}{Random split}                                                                             \\
+                \cmidrule{2-5}
+                \textbf{MLP}                 & 6.678                                  & 7.079                          & 4.321            & 5.448           \\
+                \textbf{RNN-MLP}             & \bfseries 3.423                        & \bfseries 4.344                & \bfseries 1.937  & \bfseries 3.278 \\
+                \textbf{Residual CNN}        & 4.166                                  & 5.382                          & 2.365            & 4.271           \\
+                \textbf{Transformer Encoder} & 3.947                                  & 4.644                          & 2.337            & 3.799           \\
+                \hline
+            \end{tabular}
+        }
+    \end{table}
+\end{frame}
