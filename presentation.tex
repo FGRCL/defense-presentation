@@ -5,6 +5,7 @@
 \usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage[normalem]{ulem}
+\usepackage{pifont}
 \graphicspath{ {./graphics/}{./Pictures/} }
 \usetheme{Madrid}
 \definecolor{lightblue}{RGB}{0,73,114}
@@ -15,6 +16,8 @@
 \setbeamercolor{structure}{fg=maroon}
 
 \newcommand*{\thead}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
 
 \title{Blood Pressure Estimation through Photoplethysmography using Deep Learning in Clinical Setting: Critical Survey and Solutions}
 \author{François LaBerge}
@@ -39,6 +42,10 @@
 % Training settings+
 
 \section{Introduction}
+\input{content/introduction.tex}
+
+\section{Literature Review}
+\input{content/literaturereview.tex}
 
 \section{Contributions}
 \input{content/contributions.tex}
