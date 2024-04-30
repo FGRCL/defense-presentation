@@ -58,9 +58,8 @@
     \begin{columns}
         \column{0.5\columnwidth}
         \begin{figure}
-            \includesvg[width=0.3\columnwidth]{models/Residual Conv.svg}
-            \hfill
-            \includesvg[width=0.3\columnwidth]{models/Residual Conv - Residual Block.svg}
+            \includesvg[width=0.27\columnwidth]{models/Residual Conv.svg}
+            \includesvg[width=0.27\columnwidth]{models/Residual Conv - Residual Block.svg}
         \end{figure}
 
         \column{0.5\columnwidth}
@@ -86,7 +85,7 @@
     \begin{columns}
         \column{0.5\columnwidth}
         \begin{figure}
-            \includesvg[width=0.35\columnwidth]{models/Transformer Encoder.svg}
+            \includesvg[width=0.3\columnwidth]{models/Transformer Encoder.svg}
         \end{figure}
 
         \column{0.5\columnwidth}
@@ -184,7 +183,8 @@
 \begin{frame}{Contribution 2 \& 3}{Results}
     \begin{columns}
         \column{0.5\columnwidth}
-        Best patient-wise:
+        \centering
+        Best patient-wise
         \begin{figure}
             \includesvg[height=0.3\textheight]{models/MLP.svg}
         \end{figure}
@@ -205,7 +205,8 @@
         \end{table}
 
         \column{0.5\columnwidth}
-        Best overall:
+        \centering
+        Best overall
         \begin{figure}
             \includesvg[height=0.3\textheight]{models/RNN-MLP.svg}
         \end{figure}
@@ -230,11 +231,11 @@
 \begin{frame}{Contribution 2 \& 3}{Results}
     \begin{figure}[htbp]
         \centering
-        \includesvg[width=0.42\columnwidth]{results/preprocessing random split SBP Mean Absolute Error.svg}
-        \includesvg[width=0.42\columnwidth]{results/preprocessing random split DBP Mean Absolute Error.svg}
+        \includesvg[width=0.35\columnwidth]{results/preprocessing random split SBP Mean Absolute Error.svg}
+        \includesvg[width=0.35\columnwidth]{results/preprocessing random split DBP Mean Absolute Error.svg}
 
-        \includesvg[width=0.42\columnwidth]{results/preprocessing patient split SBP Mean Absolute Error.svg}
-        \includesvg[width=0.42\columnwidth]{results/preprocessing patient split DBP Mean Absolute Error.svg}
+        \includesvg[width=0.35\columnwidth]{results/preprocessing patient split SBP Mean Absolute Error.svg}
+        \includesvg[width=0.35\columnwidth]{results/preprocessing patient split DBP Mean Absolute Error.svg}
     \end{figure}
     \begin{itemize}
         \item Best input: Usually Heartbeat Sequence
@@ -258,7 +259,7 @@
         }
     \end{table}
     \begin{itemize}
-        \item Train-Test gap much larger for patient-wise
+        \item Train-test gap much larger for patient-wise
         \item Sign of Overfitting
     \end{itemize}
 \end{frame}
