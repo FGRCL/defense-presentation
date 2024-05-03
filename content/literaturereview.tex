@@ -24,7 +24,7 @@
     \begin{itemize}
         \item PPG $\to$ ABP
         \item Regression task
-        \item AAMI: $5\pm8$ mmHg
+        \item AAMI: $5\pm8$ mmHg ($MAE \pm SD$)
     \end{itemize}
     \begin{figure}
         \includegraphics[width=0.6\columnwidth]{literature/regression.png}
@@ -35,8 +35,8 @@
     \begin{itemize}
         \item Dataset split is ambiguous
         \item Random split $\to$ data leakage
-        \item Personalization is not applicable
         \item Patient-wise split is required
+        \item Personalization is not applicable
     \end{itemize}
     \begin{figure}
         \includesvg[width=0.7\columnwidth]{literature/patientwisesplit.svg}
@@ -44,7 +44,7 @@
 \end{frame}
 
 \begin{frame}{Calibration-free}
-    New property of the desired system
+    New property of the desired solution
     \begin{table}
         \begin{tabular}{r c c c}
             \hline
