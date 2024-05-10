@@ -96,29 +96,35 @@
             \item Second dense layer: embedding size
         \end{itemize}
     \end{columns}
+\end{frame}
 
+\begin{frame}{Contribution 3: Proposed Models}{Methodology}
+    \begin{figure}
+        \centering
+        \begin{subfigure}{0.3\columnwidth}
+            \centering
+            \caption{Window}
+            \includegraphics[width=\columnwidth]{inputs/window.png}
+        \end{subfigure}
+        \begin{subfigure}{0.3\columnwidth}
+            \centering
+            \caption{Heartbeat}
+            \includegraphics[width=\columnwidth]{inputs/heartbeat.png}
+        \end{subfigure}
 
-\end{frame}\begin{frame}{Contribution 3: Input Methodologies}{Methodology}
-    Compare Input Methodologies
+        \begin{subfigure}{0.3\columnwidth}
+            \centering
+            \caption{Heartbeat Sequence}
+            \includegraphics[height=0.3\textheight]{inputs/heartbeat-sequence.png}
+        \end{subfigure}
+    \end{figure}
+
     \begin{itemize}
-        \item Window
-        \item Heartbeat
-        \item Heartbeat sequence
+        \item Keep fined-grained analysis and temporal aspect
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 3: Heartbeat Sequence Input}{Methodology}
-    Keep fined-grained analysis and temporal aspect
-    \begin{figure}
-        \includegraphics[width=0.35\columnwidth]{inputs/window.png}
-
-        \includegraphics[width=0.35\columnwidth]{inputs/heartbeat.png}
-        \includegraphics[width=0.35\columnwidth]{inputs/heartbeat-sequence.png}
-    \end{figure}
-\end{frame}
-
-
-\begin{frame}{Contribution 2 \& 3}{Results}
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     \centering
     Window
     \begin{figure}
@@ -126,13 +132,9 @@
         \hfill
         \includesvg[width=0.49\columnwidth]{results/window DBP.svg}
     \end{figure}
-    \begin{itemize}
-        \item large gap between random and patient-wise split
-        \item 13.802 mmHg lower for random split on average
-    \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 2 \& 3}{Results}
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     \centering
     Heartbeat
     \begin{figure}
@@ -140,47 +142,36 @@
         \hfill
         \includesvg[width=0.49\columnwidth]{results/heartbeat DBP.svg}
     \end{figure}
+\end{frame}
+
+
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
+    \centering
+    Heartbeat Sequence
+    \begin{figure}
+        \includesvg[width=0.49\columnwidth]{results/beatsequence SBP.svg}
+        \hfill
+        \includesvg[width=0.49\columnwidth]{results/beatsequence DBP.svg}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     \begin{itemize}
+        \item large gap between random and patient-wise split
+        \item 13.802 mmHg lower for random split on average
+        \item Random split passes AAMI, but does not generalize
+        \item No models meet AAMI standard for patient-wise
         \item Random split is most often used in the literature
     \end{itemize}
 \end{frame}
 
-
-\begin{frame}{Contribution 2 \& 3}{Results}
-    \centering
-    Heartbeat Sequence
-    \begin{figure}
-        \includesvg[width=0.49\columnwidth]{results/beatsequence SBP.svg}
-        \hfill
-        \includesvg[width=0.49\columnwidth]{results/beatsequence DBP.svg}
-    \end{figure}
-    \begin{itemize}
-        \item Random split passes AAMI, but does not generalize
-        \item No models meet AAMI standard for patient-wise
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Contribution 2 \& 3}{Results}
-    \centering
-    Heartbeat Sequence
-    \begin{figure}
-        \includesvg[width=0.49\columnwidth]{results/beatsequence SBP.svg}
-        \hfill
-        \includesvg[width=0.49\columnwidth]{results/beatsequence DBP.svg}
-    \end{figure}
-    \begin{itemize}
-        \item Random split passes AAMI, but does not generalize
-        \item No models meet AAMI standard for patient-wise
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Contribution 2 \& 3}{Results}
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     \begin{block}{Main Finding \#1}
         Non-invasive, calibration-free BP monitoring remains an unsolved problem.
     \end{block}
 \end{frame}
 
-\begin{frame}{Contribution 2 \& 3}{Results}
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     \begin{columns}
         \column{0.5\columnwidth}
         \centering
@@ -228,7 +219,7 @@
 \end{frame}
 
 
-\begin{frame}{Contribution 2 \& 3}{Results}
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     \begin{figure}[htbp]
         \centering
         \includesvg[width=0.35\columnwidth]{results/preprocessing random split SBP Mean Absolute Error.svg}
@@ -242,7 +233,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 2 \& 3}{Results}
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     \begin{table}[htbp]
         \centering
         \resizebox{\linewidth}{!}{
@@ -264,7 +255,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 2 \& 3}{Results}
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     \begin{columns}[c]
         \column{0.45\columnwidth}
         \begin{figure}
@@ -302,7 +293,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Contribution 2 \& 3}{Results}
+\begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     Overfitting solutions:
     \begin{itemize}
         \item \sout{Increase complexity}

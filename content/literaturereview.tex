@@ -1,4 +1,4 @@
-\begin{frame}{PPG}
+\begin{frame}{Photoplethysmography (PPG)}
     \begin{columns}
         \column{0.5\columnwidth}
         \begin{itemize}
@@ -24,10 +24,10 @@
     \begin{itemize}
         \item PPG $\to$ ABP
         \item Regression task
-        \item AAMI: $5\pm8$ mmHg ($MAE \pm SD$)
+        \item Association for the Advancement of Medical Instrumentation (AAMI): $5\pm8$ mmHg ($MAE \pm SD$)
     \end{itemize}
     \begin{figure}
-        \includegraphics[width=0.6\columnwidth]{literature/regression.png}
+        \includegraphics[width=0.5\columnwidth]{literature/regression.png}
     \end{figure}
 \end{frame}
 
@@ -35,10 +35,18 @@
     \begin{itemize}
         \item Dataset split is ambiguous
         \item Random split $\to$ data leakage
+        \item Learn the physiology of a patient
         \item Patient-wise split is required
         \item Personalization is not applicable
     \end{itemize}
     \begin{figure}
+        \centering
+        Random split \medskip \par
+        \includesvg[width=0.7\columnwidth]{literature/randomsplit.svg}
+
+        \medskip
+
+        Patient-wise split \medskip \par
         \includesvg[width=0.7\columnwidth]{literature/patientwisesplit.svg}
     \end{figure}
 \end{frame}
