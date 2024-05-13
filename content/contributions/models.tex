@@ -64,7 +64,7 @@
 
         \column{0.5\columnwidth}
         \begin{itemize}
-            \item kernel: 3
+            \item Kernel: 3
             \item Stacked MLP with Dropout 0.01
         \end{itemize}
         \begin{tabular}{lSS}
@@ -157,8 +157,8 @@
 
 \begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
     \begin{itemize}
-        \item large gap between random and patient-wise split
-        \item 13.802 mmHg lower for random split on average
+        \item Large gap between random and patient-wise split
+        \item MAE is 13.802 mmHg lower for random split on average
         \item Random split passes AAMI, but does not generalize
         \item No models meet AAMI standard for patient-wise
         \item Random split is most often used in the literature
@@ -179,6 +179,7 @@
         \begin{figure}
             \includesvg[height=0.3\textheight]{models/MLP.svg}
         \end{figure}
+        MLP
 
         \begin{table}[htbp]
             \centering
@@ -201,6 +202,8 @@
         \begin{figure}
             \includesvg[height=0.3\textheight]{models/RNN-MLP.svg}
         \end{figure}
+        RNN-MLP
+
         \begin{table}[htbp]
             \centering
             \resizebox{\linewidth}{!}{
@@ -294,6 +297,7 @@
 \end{frame}
 
 \begin{frame}{Contribution 2 \& 3: Reproduced \& Proposed Models}{Results}
+    % TODO move right
     Overfitting solutions:
     \begin{itemize}
         \item \sout{Increase complexity}
